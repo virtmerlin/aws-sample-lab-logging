@@ -1,0 +1,19 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "kinesis:PutRecord",
+                "iam:PassRole",
+                "firehose:PutRecord"
+            ],
+            "Resource": [
+                "arn:aws:firehose:us-east-1:987210092513:deliverystream/mglab-ph-delivery",
+                "arn:aws:iam::987210092513:role/mglab-ph-cw-to-kinesis",
+                "arn:aws:kinesis:us-east-1:987210092513:stream/mglab-ph-stream"
+            ]
+        }
+    ]
+}
