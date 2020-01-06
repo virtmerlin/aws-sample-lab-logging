@@ -497,7 +497,7 @@ Resources:
                             "recordId": record_id,
                             "result": "Ok",
                             "data": base64.b64encode("".join(
-                                f"{data['logGroup']}:{data['logStream']}\t{e['timestamp']}\t{e['message']}"
+                                f"{{data['owner']}:{data['logGroup']}:{data['logStream']}\t{e['timestamp']}\t{e['message']}"
                                 for e in data["logEvents"]
                             ).encode("utf-8")).decode("utf-8")
                         }
